@@ -8,50 +8,54 @@
   <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
-  <header class="header">
-    <h1>六角西餐廳</h1>
-  </header>
-  <main class="container">
-    <section class="bookingForm">
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeWEBeQcHq-ltNCGvn34oefxIP3h3wMR8BGIyjkNQYqdF0kQg/formResponse">
-        <div class="formGroup form-s">
-          <label for="name">姓名</label>
-          <input type="text" id="name" name="entry.357674905" v-model="customerData.name">
-        </div>
-        <div class="formGroup form-s">
-          <label for="tel">電話</label>
-          <input type="text" id="tel" v-model="customerData.tel" name="entry.740826172">
-        </div>
-        <div class="formGroup">
-          <label for="date">日期</label>
-          <input type="date" id="date" name="entry.2076596199" v-model="customerData.date">
-        </div>
-        <div class="formGroup">
-          <label for="num">用餐人數</label>
-          <select id="num" v-model="customerData.num" name="entry.1135575163">
-            <option :value="item" v-for="item in 10" :key="item">{{ item }}</option>
-          </select>
-        </div>
-        <div class="formGroup">
-          <label>其它項目</label>
-          <div class="checkboxGroup">
-            <input type="checkbox" name="entry.841105870" v-model="customerData.other" value="需要兒童座椅" id="childSeat">
-            <label for="childSeat">需要兒童座椅</label>
+  <div id="app" class="container">
+    <header class="header">
+      <h1>六角西餐廳</h1>
+    </header>
+    <main>
+      <section class="bookingForm">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeWEBeQcHq-ltNCGvn34oefxIP3h3wMR8BGIyjkNQYqdF0kQg/formResponse">
+          <div class="formGroup form-s">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="entry.357674905" v-model="customerData.name">
           </div>
-          <div class="checkboxGroup">
-            <input type="checkbox" name="entry.841105870" v-model="customerData.other" value="素食餐點" id="vegetarian">
-            <label for="vegetarian">素食餐點</label>
+          <div class="formGroup form-s">
+            <label for="tel">電話</label>
+            <input type="text" id="tel" v-model="customerData.tel" name="entry.740826172">
           </div>
-          <div class="checkboxGroup">
-            <input type="checkbox" name="entry.841105870" v-model="customerData.other" value="吸煙區" id="smoking">
-            <label for="smoking">吸煙區</label>
+          <div class="formGroup">
+            <label for="date">日期</label>
+            <input type="date" id="date" name="entry.2076596199" v-model="customerData.date">
           </div>
-        </div>
-        <div class="btnGroup">
-          <button type="submit">送出</button>
-        </div>
-      </form>
-    </section>
-  </main>
+          <div class="formGroup">
+            <label for="num">用餐人數</label>
+            <select id="num" v-model="customerData.num" name="entry.1135575163">
+              <option :value="item" v-for="item in 10" :key="item">{{ item }}</option>
+            </select>
+          </div>
+          <div class="formGroup">
+            <label>其它項目</label>
+            <div class="checkboxGroup">
+              <input type="checkbox" name="entry.841105870" v-model="customerData.other" value="需要兒童座椅" id="childSeat">
+              <label for="childSeat">需要兒童座椅</label>
+            </div>
+            <div class="checkboxGroup">
+              <input type="checkbox" name="entry.841105870" v-model="customerData.other" value="素食餐點" id="vegetarian">
+              <label for="vegetarian">素食餐點</label>
+            </div>
+            <div class="checkboxGroup">
+              <input type="checkbox" name="entry.841105870" v-model="customerData.other" value="吸煙區" id="smoking">
+              <label for="smoking">吸煙區</label>
+            </div>
+          </div>
+          <div class="btnGroup">
+            <button type="submit">送出</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="js/all.js"></script>
 </body>
 </html>
